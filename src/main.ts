@@ -2,11 +2,12 @@ import { Component } from '@angular/core';
 import { bootstrapApplication } from '@angular/platform-browser';
 import { SingleSlotComponent } from './single-slot/single-slot.component';
 import { MultiSlotComponent } from './multi-slot/multi-slot.component';
+import { ChangeDetectionComponent } from './change-detection/change-detection.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [SingleSlotComponent, MultiSlotComponent],
+  imports: [SingleSlotComponent, MultiSlotComponent, ChangeDetectionComponent],
   template: `
     <h1>Let's learn angular's content projection</h1>
     <a target="_blank" href="https://angular.dev/overview">
@@ -19,6 +20,8 @@ import { MultiSlotComponent } from './multi-slot/multi-slot.component';
       <div header>This is the header</div>
       <div body>Lorem ipsum de color blue</div>
     </app-multi-slot>
+
+    <app-change-detection></app-change-detection>
   `,
 })
 export class App {
